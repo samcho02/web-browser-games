@@ -1,0 +1,114 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap%27');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* basic body */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1ab1c9
+}
+
+/* make the outer box */
+.wrapper{
+    width: 770px;
+    border-radius: 10px;
+    padding: 35px;
+    background: white;
+}
+
+/* inner box */
+.wrapper .content-box{
+    padding: 13px 20px 0;       /* top | lr | bottom */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* scrolling effect */
+.content-box .typing-text {
+    max-height: 255px;
+    overflow-y: auto;
+}
+
+.typing-text::-webkit-scrollbar{
+    width: 0;
+}
+
+/* text formatting */
+.typing-text p {
+    font-size: 21px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.content-box .content{
+    display: flex;
+    margin-top: 17px;
+    padding: 12px 0;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+/* button */
+.content button {
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #1ab1c9;
+    transition: transform 0.3s ease;
+}
+
+.content button:active{
+    transform: scale(0.97);
+}
+
+/* stats */
+.content .result-details{
+    display: flex;
+    width: calc(100% - 140px);
+    justify-content: space-between;
+}
+
+.result-details li{
+    height: 22px;
+    align-items: center;
+    display: flex;  /* make stats the same line */
+    list-style: none; /* get rid of bullets */
+}
+
+.result-details li:not(:first-child){
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+.result-details li p{
+    font-size: 19px;
+}
+
+.result-details li span{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.result-details li:not(:first-child) span{
+    font-weight: 500;
+}
+
+.result-details li b{
+    font-weight: 500;
+}
